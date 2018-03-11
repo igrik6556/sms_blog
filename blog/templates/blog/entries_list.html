@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles markdown_deux_tags i18n %}
+{% block title %}{% trans "Blog - Main" %}{% endblock title %}
+{% block content %}
+{% for entry in entries %}
+    <div class="article">
+    <h1 class="text-center"><a class="no-underscore" href="{% url "blog:entry_detail" entry.slug %}">{{ entry.title }}</a></h1>
+    <p class="text-left">{% trans "Category" %}: <a href="{% url "blog:category_detail" entry.category.slug %}">{{ entry.category }}</a></p>
+    <p class="text-left">{% trans "Tags" %}:
+        {% for t in entry.tag.all %}
+        <a href="{% url "blog:tag_detail" t.slug %}">{{ t.name }}{% if not forloop.last %}, {% endif %}</a>
+        {% empty %}
+        ---
+        {% endfor %}
+    </p>
+    <h6 class="text-left color-grey" style="margin-bottom: 50px">{% trans "Publication date" %}: {{ entry.dt_add }}</h6>
+      <div class="media entry-text">
+        <div class="media-body">
+          {% if entry.text|length > 500 %}
+            {{ entry.text|truncatewords_html:50|markdown }}
+          {% else %}
+            {{ entry.text|markdown }}
+          {% endif %}
+         </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-3"><a href="{% url "blog:entry_detail" entry.slug %}">{% trans "Read more" %} &raquo;</a></div>
+        <div class="col-sm-offset-7 col-sm-2 text-right">
+          {% trans "Comments" %}: {{ entry.entry.count }}
+        </div>
+      </div>
+  </div>
+{% empty %}
+  <div class="alert alert-info">{% trans "Soon there will be something interesting" %}!</div>
+{% endfor %}
+{% endblock content %}

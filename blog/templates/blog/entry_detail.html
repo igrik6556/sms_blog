@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load staticfiles markdown_deux_tags i18n %}
+{% block title %}{% trans "Blog" %} - {{ entry.title }}{% endblock title %}
+{% block content %}
+<div class="article">
+  <h1 class="no_margin text-center">{{ entry.title }}</h1>
+  <h5 class="text-left">{% trans "Category" %}: <a href="{% url "blog:category_detail" entry.category.slug %}">{{ entry.category }}</a></h5>
+  <h5 class="text-left">{% trans "Tags" %}:
+    {% for t in entry.tag.all %}
+    <a href="{% url "blog:tag_detail" t.slug %}">{{ t.name }}</a>{% if not forloop.last %}, {% endif %}
+    {% empty %}
+    ---
+    {% endfor %}
+  </h5>
+  <h6 class="text-left">{% trans "Publication date" %}: {{ entry.dt_add }}</h6><hr>
+  <div class="article_text">
+  {{ entry.text|markdown }}
+  </div>
+  </div>
+</div>
+  <div class="col-sm-12">
+  <div class="article">
+    <h3 class="comment-header text-center">{% trans "Comments" %} ({{ comments.count }}):</h3>
+    {% for c in comments %}
+    <p><a name="{{ c.id }}"></a>{% trans "User" %}: {{ c.user }}</p>
+    <p class="comment-time">{{ c.dt }}</p>
+    {% if c.email %}<p>{% trans "Email" %}: {{ c.email }}</p>{% endif %}
+    {% if c.site %}<p>{% trans "Site" %}: {{ c.site }}</p>{% endif %}
+    {{ c.text|markdown }}
+    <hr>
+    {% empty %}
+    <div class="alert alert-success">{% trans "No comments yet. You can leave first :)" %}</div>
+    {% endfor %}
+  </div>
+  </div>
+  {% include "blog/_comment_form.html" with form=comment_form %}
+{% endblock content %}

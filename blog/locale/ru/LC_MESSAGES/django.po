@@ -1,0 +1,224 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-03-10 19:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: blog/admin.py:20 blog/models.py:13 blog/templates/blog/entries_list.html:9
+#: blog/templates/blog/entry_detail.html:8 blog/views.py:43
+#: templates/base.html:33
+msgid "Tags"
+msgstr "Тэги"
+
+#: blog/admin.py:24
+msgid "Number of comments"
+msgstr "Количество комментариев"
+
+#: blog/forms.py:39
+msgid "Enter your name here (Not necessary)"
+msgstr "Введите ваше имя (не обязательно)"
+
+#: blog/forms.py:43
+msgid "Enter Email address here (Not necessary)"
+msgstr "Введите свой адрес электронной почты (не обязательно)"
+
+#: blog/forms.py:47
+msgid "Enter your site url here (Not necessary)"
+msgstr "Введите ссылку на ваш сайт (не обязательно)"
+
+#: blog/forms.py:50 blog/forms.py:64
+msgid "Enter your commentary here (allow markdown syntax)"
+msgstr "Введите ваш комментарий (поддерживает синтаксис markdown)"
+
+#: blog/models.py:12
+msgid "Tag"
+msgstr "Тэг"
+
+#: blog/models.py:16
+msgid "Tag name"
+msgstr "Имя тэга"
+
+#: blog/models.py:20 blog/models.py:45 blog/models.py:80
+msgid "Slug"
+msgstr "Слаг"
+
+#: blog/models.py:37 blog/models.py:41 blog/templates/blog/entries_list.html:8
+#: blog/templates/blog/entry_detail.html:7
+msgid "Category"
+msgstr "Категория"
+
+#: blog/models.py:38 blog/views.py:56 templates/base.html:32
+msgid "Categories"
+msgstr "Категории"
+
+#: blog/models.py:62
+msgid "Entry"
+msgstr "Запись"
+
+#: blog/models.py:63
+msgid "Entries"
+msgstr "Записи"
+
+#: blog/models.py:66
+msgid "Entry author"
+msgstr "Автор записи"
+
+#: blog/models.py:70
+msgid "Entry title"
+msgstr "Заголовок записи"
+
+#: blog/models.py:71
+msgid "Entry text"
+msgstr "Текст записи"
+
+#: blog/models.py:73
+msgid "Entry tags"
+msgstr "Тэги записи"
+
+#: blog/models.py:77
+msgid "Entry Category"
+msgstr "Категория записи"
+
+#: blog/models.py:81 blog/models.py:110
+msgid "Creation time"
+msgstr "Время создания"
+
+#: blog/models.py:97
+msgid "Comment"
+msgstr "Комментарий"
+
+#: blog/models.py:98 blog/templates/blog/entries_list.html:30
+#: blog/templates/blog/entry_detail.html:23
+msgid "Comments"
+msgstr "Комментарии"
+
+#: blog/models.py:100
+msgid "Author of a commentary"
+msgstr "Автор комментария"
+
+#: blog/models.py:103
+msgid "Email of user"
+msgstr "Адрес электронной почты пользователя"
+
+#: blog/models.py:106
+msgid "Site address"
+msgstr "Адрес сайта"
+
+#: blog/models.py:109
+msgid "Text of commentary"
+msgstr "Текст комментария"
+
+#: blog/models.py:113
+msgid "Comment for entry"
+msgstr "Комментарий к записи"
+
+#: blog/templates/blog/_comment_form.html:24
+msgid "Send"
+msgstr "Отправить"
+
+#: blog/templates/blog/cat_tag_detail.html:13
+#: blog/templates/blog/cat_tag_list.html:13
+#: blog/templates/blog/entries_list.html:38
+msgid "Soon there will be something interesting"
+msgstr "Скоро тут появится что-нибудь интересное"
+
+#: blog/templates/blog/entries_list.html:3
+msgid "Blog - Main"
+msgstr "Блог - Главная"
+
+#: blog/templates/blog/entries_list.html:16
+#: blog/templates/blog/entry_detail.html:15
+msgid "Publication date"
+msgstr "Дата публикации"
+
+#: blog/templates/blog/entries_list.html:28
+msgid "Read more"
+msgstr "Читать полностью"
+
+#: blog/templates/blog/entry_detail.html:3 templates/base.html:18
+msgid "Blog"
+msgstr "Блог"
+
+#: blog/templates/blog/entry_detail.html:25
+msgid "User"
+msgstr "Пользователь"
+
+#: blog/templates/blog/entry_detail.html:27
+msgid "Email"
+msgstr "Адрес электронной почты"
+
+#: blog/templates/blog/entry_detail.html:28
+msgid "Site"
+msgstr "Сайт"
+
+#: blog/templates/blog/entry_detail.html:32
+msgid "No comments yet. You can leave first :)"
+msgstr "Пока нет комментариев. Вы можете оставить первый :)"
+
+#: blog/views.py:42
+msgid "Blog - List of tags"
+msgstr "Блог - Список тэгов"
+
+#: blog/views.py:55
+msgid "Blog - List of categories"
+msgstr "Блог - Список категорий"
+
+#: blog/views.py:70
+msgid "Blog - Category: {}"
+msgstr "Блог - Категория: {}"
+
+#: blog/views.py:71
+msgid "Category: {}"
+msgstr "Категория: {}"
+
+#: blog/views.py:85
+msgid "Blog - Tag: {}"
+msgstr "Блог - Тэг: {}"
+
+#: blog/views.py:86
+msgid "Tag: {}"
+msgstr "Тэг: {}"
+
+#: blog/views.py:93
+msgid "Comment successfully added!"
+msgstr "Комментарий успешно добавлен"
+
+#: blog/views.py:105
+msgid "Anonymous"
+msgstr "Аноним"
+
+#: templates/base.html:20
+msgid "Drop-down window"
+msgstr "Выпадающий список"
+
+#: templates/base.html:31
+msgid "Admin Panel"
+msgstr "Админка"
+
+#: templates/errors/404.html:4 templates/errors/404.html:9
+msgid "Error"
+msgstr "Ошибка"
+
+#: templates/errors/404.html:8
+msgid "The page does not exist"
+msgstr "Страницы не существует"
+
+#: templates/errors/404.html:10
+msgid "Sorry, but page not found"
+msgstr "Извини, но такой страницы нет"

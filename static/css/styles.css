@@ -1,0 +1,37 @@
+.color-grey {
+    color: grey;
+}
+
+a.no-underscore {
+    text-decoration: none;
+}
+
+.entry-text {
+    font-size: 16px;
+}
+
+.article {
+    margin: 0 0 15px 0;
+    padding: 0px 10px 5px 10px;
+    overflow: hidden;
+    border-left: 1px solid #f1eeff;
+    border-bottom: 1px solid #f1eeff;
+    border-bottom-left-radius: 4px;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.comment-header {
+    color: #23527c;
+}
+
+.comment-form {
+    margin-bottom: 30px;
+}
+
+.comment-time {
+    font-size: 12px;
+    margin-bottom: 5px;
+}

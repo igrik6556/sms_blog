@@ -1,0 +1,26 @@
+{% load staticfiles markdown_deux_tags i18n %}
+<div class="col-sm-12">
+ <form class="comment-form" action="{% url 'blog:comment_add' entry.slug %}" method="post">
+  {% csrf_token %}
+  {% for field in form.hidden_fields %}
+    {{ field }}
+  {% endfor %}
+
+  {% for field in form.visible_fields %}
+    <div class="form-group">
+    {% if field.errors|length > 0 %}
+      <div class="has-error checkbox">
+      {% for error in field.errors %}
+        <strong>{{ error }}</strong>
+      {% endfor %}
+      </div>
+    {% endif %}
+    {% if field.help_text %}
+      <div class="help-block">{{ field.help_text }}</div>
+    {% endif %}
+    {{ field }}
+    </div>
+  {% endfor %}
+  <input class="btn btn-primary btn-sm" type="submit" value={% trans "Send" %} name="comment_btn">
+</form>
+</div>

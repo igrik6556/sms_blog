@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load staticfiles i18n %}
+
+{% block title %}{% trans "Error" %} 404{% endblock %}
+
+{% block content %}
+    <div class="alert alert-danger">
+        <h3 class="no_margin">{% trans "The page does not exist" %} :(</h3>
+        <h1 class="no_margin">{% trans "Error" %} 404!</h1>
+        <h5>{% trans "Sorry, but page not found" %}</h5>
+    </div>
+{% endblock %}
